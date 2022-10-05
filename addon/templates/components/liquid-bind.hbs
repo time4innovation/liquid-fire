@@ -1,5 +1,6 @@
 {{#if this.containerless}}
   {{~#liquid-versions
+    liquidChildId=this.liquidChildId
     value=this.value
     use=this.use
     rules=this.rules
@@ -26,6 +27,7 @@
     enableGrowth=this.enableGrowth as |container|
   ~}}
     {{~#liquid-versions
+      liquidChildId=this.liquidChildId
       value=this.value
       notify=container
       use=this.use
