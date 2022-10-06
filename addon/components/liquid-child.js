@@ -1,5 +1,7 @@
 import { Promise as EmberPromise } from 'rsvp';
 import Component from '@ember/component';
+import { getOwner } from '@ember/application';
+
 export default Component.extend({
   classNames: ['liquid-child'],
 
@@ -20,6 +22,8 @@ export default Component.extend({
         if (typeof didRenderAction === 'function') {
           didRenderAction(this);
         }
+
+        if (this.liquidChildId) this.element.id = this.liquidChildId;
       }
     });
   },
